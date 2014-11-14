@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 			if( options.msgmerge ){
 
 				//If msmerge-ing then use specified directory or assume .po files are in same location has .pot
-				var poFiles = ( options.msgmerge === true ? options.dest.replace(/\/$/, "") + "/*.po" : options.msgmerge.replace(/\/$/, "") + "/*.po" );
+				var poFiles = ( options.msgmerge === true ? options.dest.replace(/\/$/, "") + "/*.po" : options.msgmerge );
 				var poFilePaths = grunt.file.expand( poFiles );
 
 				var count = poFilePaths ? poFilePaths.length : 0;
